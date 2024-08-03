@@ -8,19 +8,19 @@ export function ListHeader() {
   const [opened, { open, close }] = useDisclosure(false);
 
   return (
-    <Flex align="center" justify="space-between" my="lg">
+    <Flex align="center" justify="space-between" h={54}>
       <Box>
-        <Title size="md">List Header</Title>
-        <Text size="xs" c="dimmed">
+        <Title order={3}>List Header</Title>
+        <Text size="sm" c="dimmed">
           Created by Genilson
         </Text>
       </Box>
       <Flex align="center" gap="xs">
         <SharedUsersIcons
           users={[
-            { name: 'Genilson', image: 'https://i.pravatar.cc/150?img=1' },
-            { name: 'Genilson', image: 'https://i.pravatar.cc/150?img=2' },
-            { name: 'Genilson', image: 'https://i.pravatar.cc/150?img=3' },
+            { name: 'Genilson1', image: 'https://i.pravatar.cc/150?img=1' },
+            { name: 'Genilson2', image: 'https://i.pravatar.cc/150?img=2' },
+            { name: 'Genilson3', image: 'https://i.pravatar.cc/150?img=3' },
           ]}
         />
         <Tooltip.Group openDelay={300} closeDelay={100}>
