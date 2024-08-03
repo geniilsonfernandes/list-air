@@ -1,0 +1,38 @@
+
+.border {
+    border: 1px solid var(--mantine-color-gray-2);
+    position: relative;
+}
+
+
+.searchInput {
+    position: relative;
+    z-index: 1;
+}
+
+.results {
+    position: absolute;
+    width: calc(100% + 20px);
+    top: -10px;
+    left: -10px;
+  
+   
+
+    
+}
+
+
+.listItem {
+    cursor: pointer;
+    transition: all .2s;
+    border-radius: var(--mantine-spacing-xs);
+    padding: rem(6px);
+
+    &:active {
+        transform: translateY(1px);
+    }
+
+    outline: none;
+    border: none;
+   
+}
