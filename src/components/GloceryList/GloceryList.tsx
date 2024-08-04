@@ -46,17 +46,16 @@ export function GloceryList() {
             className={clases.glocerySwipe}
             leadingActions={leadingActions()}
             trailingActions={trailingActions()}
+            onClick={() =>
+              onOpen({
+                name: 'Bread',
+                value: '1',
+                unit: 'kg',
+                amount: '1',
+              })
+            }
           >
-            <GloceryItem
-              onClick={() =>
-                onOpen({
-                  name: 'Bread',
-                  value: '1',
-                  unit: 'kg',
-                  amount: '1',
-                })
-              }
-            />
+            <GloceryItem />
           </SwipeableListItem>
         ))}
       </SwipeableList>
