@@ -7,6 +7,7 @@ export function Glocery() {
     <>
       <Box
         p="md"
+        pb="xs"
         style={{
           position: 'sticky',
           top: 69,
@@ -16,11 +17,11 @@ export function Glocery() {
       >
         <ListHeader />
 
-        <Divider my="md" />
+        <Divider mt="md" mb="xs" />
         <Search />
       </Box>
 
-      <Box px="md" w="100%" pt="70">
+      <Box px="md" w="100%">
         <GloceryList />
       </Box>
     </>
