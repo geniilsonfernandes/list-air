@@ -28,5 +28,6 @@ export const theme = createTheme({
       'rgba(0, 0, 0, 0.09)',
     ],
   },
+
   primaryColor: 'orange',
 });

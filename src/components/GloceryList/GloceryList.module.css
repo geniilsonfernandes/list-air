@@ -1,0 +1,11 @@
+.gloceryList {
+    background-color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
+    border-radius: var(--mantine-radius-md);
+}
+
+.glocerySwipe {
+    background-color: light-dark(var(--mantine-color-default), var(--mantine-color-dark-6));
+    border-radius: var(--mantine-radius-md);
+    margin-bottom: var(--mantine-spacing-xs);
+
+}

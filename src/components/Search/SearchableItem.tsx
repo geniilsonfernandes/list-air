@@ -25,7 +25,6 @@ export function SearchableItem({
       onClick={onSelect}
       align="center"
       gap={10}
-      bg="gray.1"
       style={{ pointerEvents: isDisabled ? 'none' : 'all' }}
       classNames={{ root: classes.listItem }}
     >

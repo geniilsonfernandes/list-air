@@ -2,7 +2,8 @@
     cursor: pointer;
     transition: background .2s;
     border-radius: var(--mantine-spacing-sm);
-    opacity: 0.5;
+    background-color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
+
     &:hover {
       opacity: 1;
   }

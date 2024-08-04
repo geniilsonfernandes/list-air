@@ -1,10 +1,21 @@
-import { ActionIcon, Box, Divider, Flex, SimpleGrid, Title, Tooltip } from '@mantine/core';
+import {
+  ActionIcon,
+  Box,
+  Divider,
+  Flex,
+  ScrollArea,
+  SimpleGrid,
+  Title,
+  Tooltip,
+} from '@mantine/core';
 import { IconPlaylistAdd } from '@tabler/icons-react';
 import { ListButton } from '../ListButton/ListButton';
 
+import { cssToken } from '@/shared/css-token';
+
 export function Siderbar() {
   return (
-    <Box>
+    <Box h="100%">
       <Flex align="center" justify="space-between" h={54}>
         <Title order={3}>Minhas Listas</Title>
 
@@ -14,20 +25,14 @@ export function Siderbar() {
           </ActionIcon>
         </Tooltip>
       </Flex>
-      <Divider my="md" style={{ borderColor: 'var(--mantine-color-gray-2)' }} />
-      <SimpleGrid cols={1} spacing="4">
-        <ListButton />
-        <ListButton />
-        <ListButton />
-        <ListButton />
-        <ListButton />
-        <ListButton />
-        <ListButton />
-        <ListButton />
-        <ListButton />
-        <ListButton />
-        <ListButton />
-      </SimpleGrid>
+      <Divider my="md" />
+      <ScrollArea h={cssToken.safeAreaHeight}>
+        <SimpleGrid spacing="xs">
+          {Array.from({ length: 5 }).map((_, index) => (
+            <ListButton key={index} />
+          ))}
+        </SimpleGrid>
+      </ScrollArea>
     </Box>
   );
 }
