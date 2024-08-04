@@ -6,7 +6,8 @@ export function HomePage() {
   return (
     <Container>
       <Box
-        p="md"
+        px="md"
+        h={56}
         style={{
           borderBottom: '1px solid var(--mantine-color-gray-2)',
           position: 'sticky',

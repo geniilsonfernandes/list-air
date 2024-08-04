@@ -10,9 +10,9 @@ export function Glocery() {
         pb="xs"
         style={{
           position: 'sticky',
-          top: 69,
+          top: 50,
           zIndex: 99,
-          backgroundColor: 'var(--mantine-color-default)',
+          backgroundColor: 'var(--mantine-color-body)',
         }}
       >
         <ListHeader />

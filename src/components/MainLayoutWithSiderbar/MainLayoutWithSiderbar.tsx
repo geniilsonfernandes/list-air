@@ -28,7 +28,7 @@ export function MainLayoutWithSiderbar({
           p="md"
           style={{
             position: 'sticky',
-            top: 70,
+            top: 56,
             zIndex: 99,
             backgroundColor: 'var(--mantine-color-default)',
           }}
