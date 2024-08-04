@@ -1,6 +1,7 @@
 import { Box, Divider } from '@mantine/core';
 
 import { GloceryList, ListHeader, Search } from '@/components';
+import { GloceryStatus } from '../GloceryStatus/GloceryStatus';
 
 export function Glocery() {
   return (
@@ -18,6 +19,7 @@ export function Glocery() {
         <ListHeader />
 
         <Divider mt="md" mb="xs" />
+        <GloceryStatus />
         <Search />
       </Box>
 

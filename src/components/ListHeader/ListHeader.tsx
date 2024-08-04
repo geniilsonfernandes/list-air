@@ -1,12 +1,15 @@
 import { ActionIcon, Box, Flex, Text, Title, Tooltip } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconPrinter, IconShare } from '@tabler/icons-react';
+import { IconPrinter, IconSend, IconShare } from '@tabler/icons-react';
 
 import { ListSettings, SharedUsersIcons, ShareModal } from '@/components';
 
 export function ListHeader() {
   const [opened, { open, close }] = useDisclosure(false);
 
+  // TODO: Implementar o compartilhamento
+  // TODO: Implementar o Enviar que vai abrir um modal com a lista formatada para copiar o texto e enviar para o email
+  // TODO: Implementar o imprimir que vai abrir um modal para imprimir a lista
   return (
     <Flex align="center" justify="space-between" h={54}>
       <Box>
@@ -32,6 +35,12 @@ export function ListHeader() {
           <Tooltip label="Print" withArrow>
             <ActionIcon variant="default" aria-label="Print" size="lg">
               <IconPrinter size={14} />
+            </ActionIcon>
+          </Tooltip>
+
+          <Tooltip label="Enviar" withArrow>
+            <ActionIcon variant="default" aria-label="Print" size="lg">
+              <IconSend size={14} />
             </ActionIcon>
           </Tooltip>
           <ListSettings />

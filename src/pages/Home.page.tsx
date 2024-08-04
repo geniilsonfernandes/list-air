@@ -1,11 +1,11 @@
-import { Box, Container } from '@mantine/core';
+import { Avatar, Container, Group, Indicator } from '@mantine/core';
 
 import { ColorSchemeToggle, Glocery, MainLayoutWithSiderbar, Siderbar } from '@/components';
 
 export function HomePage() {
   return (
     <Container>
-      <Box
+      <Group
         px="md"
         h={56}
         style={{
@@ -17,7 +17,14 @@ export function HomePage() {
         }}
       >
         <ColorSchemeToggle />
-      </Box>
+        <Indicator size={14} withBorder processing>
+          <Avatar
+            size="sm"
+            radius="sm"
+            src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-1.png"
+          />
+        </Indicator>
+      </Group>
       <MainLayoutWithSiderbar sidebar={<Siderbar />}>
         <Glocery />
       </MainLayoutWithSiderbar>
