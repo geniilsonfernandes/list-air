@@ -1,7 +1,7 @@
 import { Modal } from '@mantine/core';
 
 import { GloceryItemEdit } from '@/forms/GloceryItemEdit';
-import useGloceryModalStore from '@/store/useGloceryModalStore';
+import { useGloceryModalStore } from '@/store';
 
 export function GloceryModal() {
   const { isOpen, onClose, gloceryItem } = useGloceryModalStore((state) => state);

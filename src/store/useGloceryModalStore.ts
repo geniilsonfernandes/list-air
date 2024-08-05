@@ -16,7 +16,7 @@ interface StoreState {
   getGloceryItem: () => GlocerItem | undefined;
 }
 
-const useGloceryModalStore = create<StoreState>((set, get) => ({
+export const useGloceryModalStore = create<StoreState>((set, get) => ({
   isOpen: false,
   onOpen: (gloceryItem) => set({ isOpen: true, gloceryItem }),
   onClose: () => set({ isOpen: false, gloceryItem: undefined }),
@@ -29,5 +29,3 @@ const useGloceryModalStore = create<StoreState>((set, get) => ({
   setGloceryItem: (gloceryItem) => set({ gloceryItem }),
   getGloceryItem: () => get().gloceryItem,
 }));
-
-export default useGloceryModalStore;

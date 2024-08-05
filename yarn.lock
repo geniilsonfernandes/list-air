@@ -10048,6 +10048,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^7.13.1"
     "@typescript-eslint/parser": "npm:^7.13.1"
     "@vitejs/plugin-react": "npm:^4.3.1"
+    clsx: "npm:^2.1.1"
     eslint: "npm:^8.57.0"
     eslint-config-airbnb: "npm:19.0.4"
     eslint-config-airbnb-typescript: "npm:^18.0.0"

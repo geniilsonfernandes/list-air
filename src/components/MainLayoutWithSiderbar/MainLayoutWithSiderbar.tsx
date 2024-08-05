@@ -25,10 +25,10 @@ export function MainLayoutWithSiderbar({
             base: '300px',
           }}
           h={cssToken.safeAreaHeightWithoutList}
-          p="md"
+          p="xs"
           style={{
             position: 'sticky',
-            top: 56,
+            top: 54,
             zIndex: 99,
             backgroundColor: 'var(--mantine-color-default)',
           }}
@@ -38,7 +38,7 @@ export function MainLayoutWithSiderbar({
       )}
 
       {/* <ScrollArea w="100%" h={cssToken.safeAreaHeightWithoutList}> */}
-      <Box pos="relative" flex="1">
+      <Box pos="relative" flex="1" className={classes.main}>
         {children}
       </Box>
       {/* </ScrollArea> */}

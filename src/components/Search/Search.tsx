@@ -12,7 +12,7 @@ import {
 import { useClickOutside, useDisclosure } from '@mantine/hooks';
 import { IconSearch } from '@tabler/icons-react';
 
-import useSearchStore from '@/store/useSearchStore';
+import { useSearchStore } from '@/store';
 import classes from './Search.module.css';
 import { SearchableItem } from './SearchableItem';
 

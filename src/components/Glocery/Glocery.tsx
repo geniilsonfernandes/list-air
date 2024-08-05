@@ -7,23 +7,22 @@ export function Glocery() {
   return (
     <>
       <Box
-        p="md"
-        pb="xs"
+        py="xs"
         style={{
           position: 'sticky',
-          top: 50,
+          top: 54,
           zIndex: 99,
           backgroundColor: 'var(--mantine-color-body)',
         }}
       >
         <ListHeader />
 
-        <Divider mt="md" mb="xs" />
+        <Divider my="xs" />
         <GloceryStatus />
         <Search />
       </Box>
 
-      <Box px="md" w="100%">
+      <Box w="100%">
         <GloceryList />
       </Box>
     </>

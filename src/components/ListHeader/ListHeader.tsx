@@ -1,4 +1,4 @@
-import { ActionIcon, Box, Flex, Text, Title, Tooltip } from '@mantine/core';
+import { ActionIcon, Box, Flex, Title, Tooltip } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconPrinter, IconSend, IconShare } from '@tabler/icons-react';
 
@@ -7,16 +7,10 @@ import { ListSettings, SharedUsersIcons, ShareModal } from '@/components';
 export function ListHeader() {
   const [opened, { open, close }] = useDisclosure(false);
 
-  // TODO: Implementar o compartilhamento
-  // TODO: Implementar o Enviar que vai abrir um modal com a lista formatada para copiar o texto e enviar para o email
-  // TODO: Implementar o imprimir que vai abrir um modal para imprimir a lista
   return (
-    <Flex align="center" justify="space-between" h={54}>
+    <Flex align="center" justify="space-between" py="xs">
       <Box>
         <Title order={3}>List Header</Title>
-        <Text size="sm" c="dimmed">
-          Created by Genilson
-        </Text>
       </Box>
       <Flex align="center" gap="xs">
         <SharedUsersIcons

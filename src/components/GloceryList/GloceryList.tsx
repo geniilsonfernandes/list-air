@@ -13,7 +13,7 @@ import clases from './GloceryList.module.css';
 
 import { GloceryItem } from './GloceryItem';
 
-import useGloceryModalStore from '@/store/useGloceryModalStore';
+import { useGloceryModalStore } from '@/store';
 
 export function GloceryList() {
   const { onOpen } = useGloceryModalStore((state) => state);

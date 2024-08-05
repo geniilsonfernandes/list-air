@@ -25,7 +25,7 @@ interface StoreState {
   checkIfSelected: (name: string) => boolean;
 }
 
-const useSearchStore = create<StoreState>((set, get) => ({
+export const useSearchStore = create<StoreState>((set, get) => ({
   search: '',
   searchList: mockList,
   itemsSelected: [],
@@ -52,5 +52,3 @@ const useSearchStore = create<StoreState>((set, get) => ({
   },
   checkIfSelected: (name) => get().itemsSelected.includes(name),
 }));
-
-export default useSearchStore;
