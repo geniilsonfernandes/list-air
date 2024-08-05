@@ -3,7 +3,7 @@ import { IconArchive, IconCopy, IconDotsVertical, IconEdit, IconTrash } from '@t
 
 export function ListSettings() {
   return (
-    <Menu shadow="md" width={200} trigger="click-hover">
+    <Menu shadow="md" width={200} closeOnItemClick={false}>
       <Menu.Target>
         <ActionIcon variant="default" aria-label="Settings" size="lg">
           <IconDotsVertical size={14} />
@@ -15,6 +15,7 @@ export function ListSettings() {
         <Menu.Item leftSection={<IconEdit size={14} />}>Renomear</Menu.Item>
         <Menu.Item leftSection={<IconCopy size={14} />}>Criar uma copia</Menu.Item>
         <Menu.Item leftSection={<IconArchive size={14} />}>Arquivar</Menu.Item>
+
         <Menu.Divider />
         <Menu.Item color="red" leftSection={<IconTrash size={14} />}>
           Apagar lista

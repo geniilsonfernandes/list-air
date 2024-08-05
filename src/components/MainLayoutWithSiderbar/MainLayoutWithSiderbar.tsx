@@ -1,5 +1,8 @@
 import { Box, Flex, FlexProps } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
+import classes from './MainLayoutWithSiderbar.module.css';
+
+import { cssToken } from '@/shared/css-token';
 
 type MainLayoutWithSiderbarProps = {
   children: React.ReactNode;
@@ -12,24 +15,33 @@ export function MainLayoutWithSiderbar({
   ...props
 }: MainLayoutWithSiderbarProps) {
   const matches = useMediaQuery('(min-width: 56.25em)');
+
   return (
     <Flex flex={1} pos="relative" {...props}>
       {matches && (
         <Box
-          style={{
-            borderRight: '1px solid var(--mantine-color-gray-2)',
-          }}
+          className={classes.sidebar}
           w={{
             base: '300px',
           }}
-          p="md"
+          h={cssToken.safeAreaHeightWithoutList}
+          p="xs"
+          style={{
+            position: 'sticky',
+            top: 54,
+            zIndex: 99,
+            backgroundColor: 'var(--mantine-color-default)',
+          }}
         >
           {sidebar}
         </Box>
       )}
-      <Box p="md" flex="1" pos="relative">
+
+      {/* <ScrollArea w="100%" h={cssToken.safeAreaHeightWithoutList}> */}
+      <Box pos="relative" flex="1" className={classes.main}>
         {children}
       </Box>
+      {/* </ScrollArea> */}
     </Flex>
   );
 }

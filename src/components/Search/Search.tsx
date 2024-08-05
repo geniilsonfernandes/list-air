@@ -12,7 +12,7 @@ import {
 import { useClickOutside, useDisclosure } from '@mantine/hooks';
 import { IconSearch } from '@tabler/icons-react';
 
-import useSearchStore from '@/store/useSearchStore';
+import { useSearchStore } from '@/store';
 import classes from './Search.module.css';
 import { SearchableItem } from './SearchableItem';
 
@@ -31,7 +31,7 @@ export function Search(props: BoxProps) {
   );
 
   return (
-    <Box pos="relative" {...props}>
+    <Box pos="relative" {...props} style={{ zIndex: 99 }}>
       <Input
         placeholder="Procurar produtos"
         rightSectionPointerEvents="all"
@@ -70,7 +70,6 @@ export function Search(props: BoxProps) {
                 {searchList.map((name, index) => (
                   <SearchableItem
                     name={name}
-                    isLoading
                     key={index}
                     selected={checkIfSelected(name)}
                     onSelect={() => handleSelect(name)}

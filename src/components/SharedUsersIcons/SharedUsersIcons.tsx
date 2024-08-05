@@ -17,7 +17,7 @@ export function SharedUsersIcons({
       <Avatar.Group spacing="sm" visibleFrom={visibleFrom}>
         {users.map(({ name, image }) => (
           <Tooltip key={name} label={name} withArrow>
-            <Avatar src={image} radius="sm" alt={name} />
+            <Avatar size="sm" src={image} radius="xl" alt={name} />
           </Tooltip>
         ))}
       </Avatar.Group>

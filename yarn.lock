@@ -10048,6 +10048,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^7.13.1"
     "@typescript-eslint/parser": "npm:^7.13.1"
     "@vitejs/plugin-react": "npm:^4.3.1"
+    clsx: "npm:^2.1.1"
     eslint: "npm:^8.57.0"
     eslint-config-airbnb: "npm:19.0.4"
     eslint-config-airbnb-typescript: "npm:^18.0.0"
@@ -10067,6 +10068,7 @@ __metadata:
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     react-router-dom: "npm:^6.23.1"
+    react-swipeable-list: "npm:^1.9.3"
     storybook: "npm:^8.1.10"
     storybook-dark-mode: "npm:^4.0.2"
     stylelint: "npm:^16.6.1"
@@ -11670,6 +11672,13 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 10c0/6d66f3bdb65e1ec79089f80314da97c9a005087a04ee034255a5de129a4c0d9fd0bf99fa7bf642781ac2dc745ca687aae3de082bd8afdd0d117bc953241e15ad
+  languageName: node
+  linkType: hard
+
+"react-swipeable-list@npm:^1.9.3":
+  version: 1.9.3
+  resolution: "react-swipeable-list@npm:1.9.3"
+  checksum: 10c0/612d39776a41cf1f79950aadb3c10e859c2a8fa8cb36b6252143193398d86ea8553fbe3b70627cb0dfa7cbdc69e58b0e50e15221800401e95da55db8acbe169c
   languageName: node
   linkType: hard
 

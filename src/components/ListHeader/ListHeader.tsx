@@ -1,6 +1,6 @@
-import { ActionIcon, Box, Flex, Text, Title, Tooltip } from '@mantine/core';
+import { ActionIcon, Box, Flex, Title, Tooltip } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconPrinter, IconShare } from '@tabler/icons-react';
+import { IconPrinter, IconSend, IconShare } from '@tabler/icons-react';
 
 import { ListSettings, SharedUsersIcons, ShareModal } from '@/components';
 
@@ -8,12 +8,9 @@ export function ListHeader() {
   const [opened, { open, close }] = useDisclosure(false);
 
   return (
-    <Flex align="center" justify="space-between" h={54}>
+    <Flex align="center" justify="space-between" py="xs">
       <Box>
         <Title order={3}>List Header</Title>
-        <Text size="sm" c="dimmed">
-          Created by Genilson
-        </Text>
       </Box>
       <Flex align="center" gap="xs">
         <SharedUsersIcons
@@ -32,6 +29,12 @@ export function ListHeader() {
           <Tooltip label="Print" withArrow>
             <ActionIcon variant="default" aria-label="Print" size="lg">
               <IconPrinter size={14} />
+            </ActionIcon>
+          </Tooltip>
+
+          <Tooltip label="Enviar" withArrow>
+            <ActionIcon variant="default" aria-label="Print" size="lg">
+              <IconSend size={14} />
             </ActionIcon>
           </Tooltip>
           <ListSettings />
