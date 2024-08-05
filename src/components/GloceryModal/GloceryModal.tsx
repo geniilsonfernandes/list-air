@@ -1,6 +1,6 @@
 import { Modal } from '@mantine/core';
 
-import { GloceryItemEdit } from '@/forms/GloceryItemEdit';
+import { GloceryItemEdit } from '@/forms/GloceryItemForm';
 import { useGloceryModalStore } from '@/store';
 
 export function GloceryModal() {

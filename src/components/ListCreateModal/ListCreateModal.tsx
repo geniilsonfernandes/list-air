@@ -1,6 +1,6 @@
 import { Modal } from '@mantine/core';
 
-import { ListCreate } from '@/forms/ListCreate';
+import { ListCreate } from '@/forms/ListCreateForm';
 import { useCreateListModalStore } from '@/store';
 
 export function ListCreateModal() {
