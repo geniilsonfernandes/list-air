@@ -25,7 +25,7 @@ export function Header() {
         borderBottom: '1px solid var(--mantine-color-gray-2)',
         position: 'sticky',
         top: 0,
-        zIndex: 99,
+        zIndex: 100,
         backgroundColor: 'var(--mantine-color-default)',
       }}
     >

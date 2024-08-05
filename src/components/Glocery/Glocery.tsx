@@ -1,4 +1,4 @@
-import { Box, Divider } from '@mantine/core';
+import { Box, Divider, Space } from '@mantine/core';
 
 import { GloceryList, ListHeader, Search } from '@/components';
 import { GloceryStatus } from '../GloceryStatus/GloceryStatus';
@@ -6,8 +6,12 @@ import { GloceryStatus } from '../GloceryStatus/GloceryStatus';
 export function Glocery() {
   return (
     <>
+      <Space h="xs" />
+      <ListHeader />
+
+      <Divider my="xs" />
+      <GloceryStatus />
       <Box
-        py="xs"
         style={{
           position: 'sticky',
           top: 54,
@@ -15,11 +19,9 @@ export function Glocery() {
           backgroundColor: 'var(--mantine-color-body)',
         }}
       >
-        <ListHeader />
-
-        <Divider my="xs" />
-        <GloceryStatus />
+        <Space h="xs" />
         <Search />
+        <Space h="xs" />
       </Box>
 
       <Box w="100%">

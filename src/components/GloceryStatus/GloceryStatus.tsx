@@ -21,7 +21,7 @@ const GloceryStatusDisplay = ({ title, value, tooltip, ...props }: GloceryStatus
 
 export function GloceryStatus() {
   return (
-    <Group mb="xs" gap="xs" grow>
+    <Group gap="xs" grow>
       <GloceryStatusDisplay title="Orçamento" value={10} tooltip="orçamento disponível" />
 
       <GloceryStatusDisplay title="Total" value={0} tooltip="Total gasto de itens selecionados" />
