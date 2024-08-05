@@ -1,25 +1,15 @@
-import { Container, Input } from '@mantine/core';
-import { IconSearch } from '@tabler/icons-react';
-import { useState } from 'react';
+import { Container } from '@mantine/core';
 
-import { ColorSchemeToggle } from '@/components';
+import { Glocery, MainLayoutWithSiderbar, Siderbar } from '@/components';
+import { Header } from '@/components/Header/Header';
 
 export function HomePage() {
-  const [value, setValue] = useState('Clear me');
   return (
     <Container>
-      <Input
-        placeholder="Procurar produtos"
-        value={value}
-        onChange={(event) => setValue(event.currentTarget.value)}
-        rightSectionPointerEvents="all"
-        mt="md"
-        size="md"
-        radius="xl"
-        variant="filled"
-        leftSection={<IconSearch size={14} />}
-      />
-      <ColorSchemeToggle />
+      <Header />
+      <MainLayoutWithSiderbar sidebar={<Siderbar />}>
+        <Glocery />
+      </MainLayoutWithSiderbar>
     </Container>
   );
 }

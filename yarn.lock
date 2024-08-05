@@ -2012,6 +2012,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.7":
+  version: 7.25.0
+  resolution: "@babel/runtime@npm:7.25.0"
+  dependencies:
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 10c0/bd3faf246170826cef2071a94d7b47b49d532351360ecd17722d03f6713fd93a3eb3dbd9518faa778d5e8ccad7392a7a604e56bd37aaad3f3aa68d619ccd983d
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.22.15":
   version: 7.22.15
   resolution: "@babel/template@npm:7.22.15"
@@ -2982,12 +2991,48 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mantine/form@npm:^7.11.2":
+  version: 7.11.2
+  resolution: "@mantine/form@npm:7.11.2"
+  dependencies:
+    fast-deep-equal: "npm:^3.1.3"
+    klona: "npm:^2.0.6"
+  peerDependencies:
+    react: ^18.2.0
+  checksum: 10c0/79690c28b67556a51010115e2d405dfd45618a630770efcbbc193a2e8bc7cf48b116faf1e65106dea8a4e0a09eb703639369ff518c700ca212016f739390089a
+  languageName: node
+  linkType: hard
+
 "@mantine/hooks@npm:7.11.2":
   version: 7.11.2
   resolution: "@mantine/hooks@npm:7.11.2"
   peerDependencies:
     react: ^18.2.0
   checksum: 10c0/78bcea73ab89513c07a0ad2283a11f91d7caa2c6c2139c48ae94ae8adebfcf9aca1b333db32a79195455606cc499b98f4e0654e056ec137abbf19ec4ccb1fa5b
+  languageName: node
+  linkType: hard
+
+"@mantine/notifications@npm:^7.11.2":
+  version: 7.11.2
+  resolution: "@mantine/notifications@npm:7.11.2"
+  dependencies:
+    "@mantine/store": "npm:7.11.2"
+    react-transition-group: "npm:4.4.5"
+  peerDependencies:
+    "@mantine/core": 7.11.2
+    "@mantine/hooks": 7.11.2
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: 10c0/20e94be1c8b10a63f1fee8dc6c4fbcb2af3d0a998a0ce04f3b26c77531b74713f878d03ff7da6004df3f50689b71ad349b40c7d4ab54e16c586e07249ebe35ce
+  languageName: node
+  linkType: hard
+
+"@mantine/store@npm:7.11.2":
+  version: 7.11.2
+  resolution: "@mantine/store@npm:7.11.2"
+  peerDependencies:
+    react: ^18.2.0
+  checksum: 10c0/9b92d0d6e3818dcd0b7503ce8170cc625f5013ccc087bcc7020888fffd7694c7e9256d6bf1403e61ad20028b4c6cad14e482a2f2e2691b59cc3f04fa7dbed030
   languageName: node
   linkType: hard
 
@@ -6850,6 +6895,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dom-helpers@npm:^5.0.1":
+  version: 5.2.1
+  resolution: "dom-helpers@npm:5.2.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.8.7"
+    csstype: "npm:^3.0.2"
+  checksum: 10c0/f735074d66dd759b36b158fa26e9d00c9388ee0e8c9b16af941c38f014a37fc80782de83afefd621681b19ac0501034b4f1c4a3bff5caa1b8667f0212b5e124c
+  languageName: node
+  linkType: hard
+
 "dotenv-expand@npm:^10.0.0":
   version: 10.0.0
   resolution: "dotenv-expand@npm:10.0.0"
@@ -9700,6 +9755,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"klona@npm:^2.0.6":
+  version: 2.0.6
+  resolution: "klona@npm:2.0.6"
+  checksum: 10c0/94eed2c6c2ce99f409df9186a96340558897b3e62a85afdc1ee39103954d2ebe1c1c4e9fe2b0952771771fa96d70055ede8b27962a7021406374fdb695fd4d01
+  languageName: node
+  linkType: hard
+
 "known-css-properties@npm:^0.29.0":
   version: 0.29.0
   resolution: "known-css-properties@npm:0.29.0"
@@ -9951,12 +10013,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mantine-form-zod-resolver@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "mantine-form-zod-resolver@npm:1.1.0"
+  peerDependencies:
+    "@mantine/form": ">=7.0.0"
+    zod: ">=3.0.0"
+  checksum: 10c0/3ff086f2a5d7b9d3d56b09f16fdc27919000c2007279c2e5e6fe85c60c56ee75a13cfebaa1dd341c4ddafd73aba9a3c59a98ea41c59ea8d01c67483dc07ea1ad
+  languageName: node
+  linkType: hard
+
 "mantine-vite-template@workspace:.":
   version: 0.0.0-use.local
   resolution: "mantine-vite-template@workspace:."
   dependencies:
     "@mantine/core": "npm:7.11.2"
+    "@mantine/form": "npm:^7.11.2"
     "@mantine/hooks": "npm:7.11.2"
+    "@mantine/notifications": "npm:^7.11.2"
     "@storybook/addon-essentials": "npm:^8.1.10"
     "@storybook/addon-interactions": "npm:^8.1.10"
     "@storybook/addon-links": "npm:^8.1.10"
@@ -9974,6 +10048,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^7.13.1"
     "@typescript-eslint/parser": "npm:^7.13.1"
     "@vitejs/plugin-react": "npm:^4.3.1"
+    clsx: "npm:^2.1.1"
     eslint: "npm:^8.57.0"
     eslint-config-airbnb: "npm:19.0.4"
     eslint-config-airbnb-typescript: "npm:^18.0.0"
@@ -9984,6 +10059,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^4.6.2"
     identity-obj-proxy: "npm:^3.0.0"
     jsdom: "npm:^24.1.0"
+    mantine-form-zod-resolver: "npm:^1.1.0"
     postcss: "npm:^8.4.38"
     postcss-preset-mantine: "npm:1.17.0"
     postcss-simple-vars: "npm:^7.0.1"
@@ -9992,6 +10068,7 @@ __metadata:
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     react-router-dom: "npm:^6.23.1"
+    react-swipeable-list: "npm:^1.9.3"
     storybook: "npm:^8.1.10"
     storybook-dark-mode: "npm:^4.0.2"
     stylelint: "npm:^16.6.1"
@@ -10000,6 +10077,8 @@ __metadata:
     vite: "npm:^5.3.1"
     vite-tsconfig-paths: "npm:^4.3.2"
     vitest: "npm:^1.6.0"
+    zod: "npm:^3.23.8"
+    zustand: "npm:^4.5.4"
   languageName: unknown
   linkType: soft
 
@@ -11255,7 +11334,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -11596,6 +11675,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-swipeable-list@npm:^1.9.3":
+  version: 1.9.3
+  resolution: "react-swipeable-list@npm:1.9.3"
+  checksum: 10c0/612d39776a41cf1f79950aadb3c10e859c2a8fa8cb36b6252143193398d86ea8553fbe3b70627cb0dfa7cbdc69e58b0e50e15221800401e95da55db8acbe169c
+  languageName: node
+  linkType: hard
+
 "react-textarea-autosize@npm:8.5.3":
   version: 8.5.3
   resolution: "react-textarea-autosize@npm:8.5.3"
@@ -11606,6 +11692,21 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
   checksum: 10c0/33d38a6d96cf584842695b50c341980944ece23a42155bf0bd1958f02396adb185c7720b88678dc677817fe111783059c0ebcdf7761644006892583b10e258ee
+  languageName: node
+  linkType: hard
+
+"react-transition-group@npm:4.4.5":
+  version: 4.4.5
+  resolution: "react-transition-group@npm:4.4.5"
+  dependencies:
+    "@babel/runtime": "npm:^7.5.5"
+    dom-helpers: "npm:^5.0.1"
+    loose-envify: "npm:^1.4.0"
+    prop-types: "npm:^15.6.2"
+  peerDependencies:
+    react: ">=16.6.0"
+    react-dom: ">=16.6.0"
+  checksum: 10c0/2ba754ba748faefa15f87c96dfa700d5525054a0141de8c75763aae6734af0740e77e11261a1e8f4ffc08fd9ab78510122e05c21c2d79066c38bb6861a886c82
   languageName: node
   linkType: hard
 
@@ -13735,6 +13836,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"use-sync-external-store@npm:1.2.0":
+  version: 1.2.0
+  resolution: "use-sync-external-store@npm:1.2.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 10c0/ac4814e5592524f242921157e791b022efe36e451fe0d4fd4d204322d5433a4fc300d63b0ade5185f8e0735ded044c70bcf6d2352db0f74d097a238cebd2da02
+  languageName: node
+  linkType: hard
+
 "util-deprecate@npm:^1.0.1, util-deprecate@npm:^1.0.2, util-deprecate@npm:~1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
@@ -14290,5 +14400,32 @@ __metadata:
   version: 1.0.0
   resolution: "yocto-queue@npm:1.0.0"
   checksum: 10c0/856117aa15cf5103d2a2fb173f0ab4acb12b4b4d0ed3ab249fdbbf612e55d1cadfd27a6110940e24746fb0a78cf640b522cc8bca76f30a3b00b66e90cf82abe0
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.23.8":
+  version: 3.23.8
+  resolution: "zod@npm:3.23.8"
+  checksum: 10c0/8f14c87d6b1b53c944c25ce7a28616896319d95bc46a9660fe441adc0ed0a81253b02b5abdaeffedbeb23bdd25a0bf1c29d2c12dd919aef6447652dd295e3e69
+  languageName: node
+  linkType: hard
+
+"zustand@npm:^4.5.4":
+  version: 4.5.4
+  resolution: "zustand@npm:4.5.4"
+  dependencies:
+    use-sync-external-store: "npm:1.2.0"
+  peerDependencies:
+    "@types/react": ">=16.8"
+    immer: ">=9.0.6"
+    react: ">=16.8"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    immer:
+      optional: true
+    react:
+      optional: true
+  checksum: 10c0/479af491ffa1f1eb2c38b3ba25dc4e14339e8b35a60033d3f6c165b22f8be8163f7e1370015ded9c6e28548cd25af84a73fb40b5fad0bd7882d16ddd5ed613c6
   languageName: node
   linkType: hard
