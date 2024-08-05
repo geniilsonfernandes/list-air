@@ -17,7 +17,7 @@ export function GloceryItem({ onClick }: GloceryItemProps) {
         borderRadius: 'var(--mantine-radius-md)',
       }}
     >
-      <Checkbox />
+      <Checkbox onClick={(e) => e.stopPropagation()} />
       <Text size="sm">Bread</Text>
 
       <Group ml="auto" align="center" gap="xs">

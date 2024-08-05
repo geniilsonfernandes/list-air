@@ -1,4 +1,5 @@
-import { Flex, Stack, Text } from '@mantine/core';
+import { Box, Flex, Stack } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import { IconCheck, IconTrash } from '@tabler/icons-react';
 import {
   LeadingActions,
@@ -13,10 +14,14 @@ import clases from './GloceryList.module.css';
 
 import { GloceryItem } from './GloceryItem';
 
+import { mediaQuery } from '@/shared/mediaQuery';
 import { useGloceryModalStore } from '@/store';
 
 export function GloceryList() {
   const { onOpen } = useGloceryModalStore((state) => state);
+
+  const matches = useMediaQuery(mediaQuery.md);
+
   const leadingActions = () => (
     <LeadingActions>
       <SwipeAction onClick={() => console.info('swipe action triggered')}>
@@ -37,10 +42,22 @@ export function GloceryList() {
     </TrailingActions>
   );
 
+  if (matches) {
+    return (
+      <Stack p="xs" align="stretch" gap="0" className={clases.gloceryList}>
+        {Array.from({ length: 100 }).map((_, index) => (
+          <Box key={index} className={clases.glocerySwipe}>
+            <GloceryItem />
+          </Box>
+        ))}
+      </Stack>
+    );
+  }
+
   return (
     <Stack p="xs" align="stretch" gap="xs" className={clases.gloceryList}>
       <SwipeableList type={ListType.IOS} threshold={0.5}>
-        {Array.from({ length: 100 }).map((_, index) => (
+        {Array.from({ length: 1 }).map((_, index) => (
           <SwipeableListItem
             key={index}
             className={clases.glocerySwipe}
@@ -59,10 +76,6 @@ export function GloceryList() {
           </SwipeableListItem>
         ))}
       </SwipeableList>
-
-      <Text c="dimmed" size="sm">
-        Categories
-      </Text>
     </Stack>
   );
 }
