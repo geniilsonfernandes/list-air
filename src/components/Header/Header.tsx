@@ -2,12 +2,13 @@ import { Avatar, Button, Group, Menu, rem, Text } from '@mantine/core';
 import {
   IconChevronDown,
   IconLogout,
-  IconOctagon,
   IconPlayerPause,
   IconSettings,
   IconSwitchHorizontal,
   IconTrash,
 } from '@tabler/icons-react';
+import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
+import Logo from '../Logo/Logo';
 
 const user = {
   name: 'Jane Spoonfighter',
@@ -20,16 +21,17 @@ export function Header() {
     <Group
       justify="space-between"
       w="100%"
+      px="xs"
       h={54}
       style={{
-        borderBottom: '1px solid var(--mantine-color-gray-2)',
         position: 'sticky',
         top: 0,
         zIndex: 100,
         backgroundColor: 'var(--mantine-color-default)',
       }}
     >
-      <IconOctagon style={{ width: rem(20), height: rem(20) }} stroke={1.5} />
+      <Logo />
+      <ColorSchemeToggle />
       <Menu
         width={260}
         position="bottom-end"
@@ -37,10 +39,10 @@ export function Header() {
         withinPortal
       >
         <Menu.Target>
-          <Button variant="default">
+          <Button variant="default" px="xs">
             <Group gap={7}>
               <Avatar src={user.image} alt={user.name} radius="xl" size={20} />
-              <Text fw={500} size="sm" lh={1} mr={3}>
+              <Text fw={500} size="sm" lh={1}>
                 {user.name}
               </Text>
               <IconChevronDown style={{ width: rem(12), height: rem(12) }} stroke={1.5} />

@@ -2,8 +2,6 @@ import { Box, Flex, FlexProps } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import classes from './MainLayoutWithSiderbar.module.css';
 
-import { cssToken } from '@/shared/css-token';
-
 type MainLayoutWithSiderbarProps = {
   children: React.ReactNode;
   sidebar?: React.ReactNode;
@@ -24,8 +22,9 @@ export function MainLayoutWithSiderbar({
           w={{
             base: '300px',
           }}
-          h={cssToken.safeAreaHeightWithoutList}
-          p="xs"
+          py="xs"
+          px="sm"
+          h="calc(100vh - 54px)"
           style={{
             position: 'sticky',
             top: 54,
@@ -38,7 +37,7 @@ export function MainLayoutWithSiderbar({
       )}
 
       {/* <ScrollArea w="100%" h={cssToken.safeAreaHeightWithoutList}> */}
-      <Box pos="relative" flex="1" className={classes.main}>
+      <Box pos="relative" px="sm" flex="1" className={classes.main}>
         {children}
       </Box>
       {/* </ScrollArea> */}

@@ -19,11 +19,11 @@ export function Siderbar() {
 
   return (
     <Box h="100%">
-      <Flex align="center" py="xs" justify="space-between">
-        <Title order={3}>Minhas Listas</Title>
+      <Flex align="center" justify="space-between">
+        <Title order={5}>Minhas Listas</Title>
 
         <Tooltip label="Add List" withArrow>
-          <ActionIcon variant="filled" onClick={onOpen} aria-label="Settings" size="lg">
+          <ActionIcon variant="default" onClick={onOpen} aria-label="Settings" size="lg">
             <IconPlaylistAdd size={14} />
           </ActionIcon>
         </Tooltip>
@@ -31,7 +31,7 @@ export function Siderbar() {
       <Divider my="xs" />
       <ScrollArea h={cssToken.safeAreaHeight}>
         <SimpleGrid spacing="xs">
-          {Array.from({ length: 5 }).map((_, index) => (
+          {Array.from({ length: 50 }).map((_, index) => (
             <ListButton key={index} />
           ))}
         </SimpleGrid>

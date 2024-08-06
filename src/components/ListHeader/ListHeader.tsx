@@ -10,7 +10,7 @@ export function ListHeader() {
   return (
     <Flex align="center" justify="space-between" py="xs">
       <Box>
-        <Title order={3}>List Header</Title>
+        <Title order={5}>List Header</Title>
       </Box>
       <Flex align="center" gap="xs">
         <SharedUsersIcons

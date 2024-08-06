@@ -6,10 +6,9 @@ import { GloceryStatus } from '../GloceryStatus/GloceryStatus';
 export function Glocery() {
   return (
     <>
-      <Space h="xs" />
       <ListHeader />
 
-      <Divider my="xs" />
+      <Divider mb="xs" />
       <GloceryStatus />
       <Box
         style={{
